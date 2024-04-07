@@ -8,6 +8,19 @@ body {
 
 .title {
   color: #333;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8a2be2
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .hidden {
@@ -20,8 +33,17 @@ body {
   margin: 10px auto;
   padding: 10px;
   resize: none;
-  background-color: black;
-  color: lime;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8a2be2
+  );
+  color: black;
   font-family: monospace;
   border: 2px solid lime;
 }
@@ -41,39 +63,6 @@ button:hover {
   background-color: #f5f5f5;
 }
 
-.emoji {
-  font-size: 24px;
-}
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-a:active {
-  text-decoration: none;
-}
-input::file-selector-button {
-  background-color: f5f5f5;
-}
-.title {
-  background: linear-gradient(
-    90deg,
-    #ff0000,
-    #ff7f00,
-    #ffff00,
-    #00ff00,
-    #0000ff,
-    #4b0082,
-    #8a2be2
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
 .choose-file-btn {
   background: linear-gradient(
     90deg,
@@ -98,4 +87,19 @@ input::file-selector-button {
 
 .choose-file-btn:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.emoji {
+  font-size: 24px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+input::file-selector-button {
+  background-color: #f5f5f5;
 }
