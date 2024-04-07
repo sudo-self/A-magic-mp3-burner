@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const base64Textarea = document.getElementById("base64Textarea");
   const copyButton = document.getElementById("copyButton");
   const downloadButton = document.getElementById("downloadButton");
+  const image = document.getElementById("imageToRotate");
 
   burnButton.addEventListener("click", handleUpload);
   copyButton.addEventListener("click", copyBase64);
@@ -19,11 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const reader = new FileReader();
+    reader.onloadstart = function () {
+      console.log("File read started");
+      image.classList.add("rotate360");
+    };
     reader.onload = function (event) {
       console.log("File successfully read");
       const base64Data = event.target.result.split(",")[1];
       base64Textarea.value = base64Data;
       base64Content.classList.remove("hidden");
+      image.classList.remove("rotate360");
     };
 
     reader.readAsDataURL(file);

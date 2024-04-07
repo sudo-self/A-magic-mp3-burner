@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Magic MP3</title>
+  <title>CodePen - Magic MP3 Burner</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 
@@ -10,14 +10,14 @@
 <body>
 <!-- partial:index.partial.html -->
 <h1 class="title">Magic Mp3 Burner</h1><br>
-<img src="https://media.dev.to/cdn-cgi/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fbadge%2Fbadge_image%2F320%2FHeader_Draft-06.png" hieght="100px" width="100px"></img>
+<img id="imageToRotate" src="https://media.dev.to/cdn-cgi/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fbadge%2Fbadge_image%2F320%2FHeader_Draft-06.png" height="100px" width="100px">
 
 </h4><br>
 <h6><a style="color:red"><a href="https://mp3-burn.pages.dev">mp3-burn.pages.dev</a></h6><br>
 <input class="choose-file-btn" type="file" id="mp3FileInput" accept=".mp3">
 <button id="burnButton">💿</button>
 <div id="base64Content" class="hidden">
-  <h2 class="sub-title">🔥 index.html 🔥</h2>
+  <h2 class="sub-title">index.html</h2>
   <textarea id="base64Textarea" readonly></textarea><br><br>
   <button id="copyButton">Copy</button>
   <button id="downloadButton">Download</button>
