@@ -177,18 +177,25 @@
       function downloadIndexHtml() {
         const base64Data = base64Textarea.value;
         const htmlContent = `
-          <!DOCTYPE html>
+         <!DOCTYPE html>
           <html lang="en">
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Mp3 Player</title>
           </head>
-          <body>
-            <audio controls>
-              <source src="data:audio/mp3;base64,${base64Data}" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
+          <body style="background-color: #f0f0f0;">
+            <center>
+              <h2>Mp3 Playlist</h2>
+              <audio controls>
+                <source src="data:audio/mp3;base64,${base64Data}" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </center>
+            <!-- Footer -->
+            <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: black; color: white; padding: 10px; text-align: center;">
+              <a href="https://mp3-burn.pages.dev" style="color: white; text-decoration: none;">made with&nbsp;&#10084;&nbsp;Magic Mp3 Burner&nbsp;&nbsp;&copy;2024</a>
+            </div>
           </body>
           </html>
         `;
